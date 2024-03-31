@@ -1,0 +1,40 @@
+<!--
+  Tahsin Can Koçum
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <script src="roslib.min.js"></script>
+  <script src="nipplejs.js"></script>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="jquery.js"></script>
+</head>
+
+<body>
+  <div class="topnav"><h1><i class="far fa-sun"></i>Ros Remote User Interface<i class="far fa-sun"></i></h1></div>
+  <div class="card"><p>Ros connection status: <span id="status"></span></p>
+ <!-- <p>Last message on /txt_msg: <span id="msg"></span></p> -->
+</div>
+  <p></p>
+  <div class="topnav"><h1><i class="far fa-sun"></i>Movement and Camera Control<i class="far fa-sun"></i></h1></div>
+  <button name="lefter" onclick="cameratoleft()">LEFT</button>
+  <button name="reset" onclick="cameratoreset()">RESET</button> 
+  <button name="right" onclick="cameratoright()">RİGHT</button>
+  <button name="drillcam" onclick="location.href='http://192.168.1.21/drillcam.html'" type="button">
+    DrillCamera</button>
+  <!-- <button name="drillstart" onclick="">Drill Start</button> -->
+  <!-- <button name="drillstop" onclick="">Drill Stop</button> -->
+  <!-- <button name="brakes" onclick="differtialbrake()">Brakes</button> -->
+  <div id="zone_joystick"></div>
+  <div id="zone_joystickcamera"></div>
+  <h1></h1>
+  <img src="http://192.168.1.21:8080/stream?topic=/Realsense_Camera_RGB/RGB/image_raw&type=mjpeg&quality=100&width=800&height=640"></img>
+  <div class="footer"><p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Tahsin Can KOCUM. All Rights Reserved</p></div>
+</body>
+</html>

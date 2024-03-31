@@ -1,0 +1,9 @@
+[31-Mar-2024 10:58:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generateRandomPassword() in /home/cankocum/public_html/feng/admin.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/cankocum/public_html/feng/admin.php on line 85
+[31-Mar-2024 10:58:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generateRandomPassword() in /home/cankocum/public_html/feng/admin.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/cankocum/public_html/feng/admin.php on line 85
+[31-Mar-2024 15:50:07 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/cankocum/public_html/feng/index.php on line 65
