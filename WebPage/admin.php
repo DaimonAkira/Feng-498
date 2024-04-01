@@ -11,6 +11,8 @@ if (!isset($_SESSION["username"]) || !($_SESSION["isAdmin"] || $_SESSION["isSupe
 // "super admin" yetkisi olan kullanıcılar için kullanıcı listesi
 $usersFile = "users.cfg";
 $users = file($usersFile, FILE_IGNORE_NEW_LINES);
+$welcomeMessage = "Hoş geldin, " . $_SESSION["username"] . "!";
+$role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Admin" : "Kullanıcı");
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,6 +23,11 @@ $users = file($usersFile, FILE_IGNORE_NEW_LINES);
     </style>
 </head>
 <body>
+	 <!-- Hoş geldin mesajı ve yetki düzeyi -->
+    <div id="welcomeMessage">
+        <p><?php echo $welcomeMessage; ?></p>
+        <p>Yetki Düzeyin: <?php echo $role; ?></p>
+    </div>
     <h2>Admin Panel</h2>
     <h3>Users</h3>
     <ul>

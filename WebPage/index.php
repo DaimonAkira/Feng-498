@@ -7,6 +7,9 @@ if (!isset($_SESSION["username"])) {
     header("Location: login.php");
     exit();
 }
+$welcomeMessage = "Hoş geldin, " . $_SESSION["username"] . "!";
+$role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Admin" : "Kullanıcı");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,8 +21,14 @@ if (!isset($_SESSION["username"])) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+	
 <body>
     <div class="topnav"><h1><i class="far fa-sun"></i>Ros Remote User Interface<i class="far fa-sun"></i></h1></div>
+	 <!-- Hoş geldin mesajı ve yetki düzeyi -->
+    <div id="welcomeMessage">
+        <p><?php echo $welcomeMessage; ?></p>
+        <p>Yetki Düzeyin: <?php echo $role; ?></p>
+    </div>
     <div class="card"><p>Ros connection status: <span id="status"></span></p></div>
     
     
