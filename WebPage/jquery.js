@@ -6,8 +6,8 @@
 
 //const config = require('./config.json');
 //const ip = ""; this is for the mobile device ip
-const ip = "1234"; // this is my local ip
-const port = "1235123";
+const ip = "4777"; // this is my local ip
+const port = "1323";
 const urll = 'ws://'+ip+':'+port;
 
 

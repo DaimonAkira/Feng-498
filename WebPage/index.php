@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Oturum kontrolü yapılır
+if (!isset($_SESSION["username"])) {
+    // Kullanıcı girişi yapılmamışsa, giriş sayfasına yönlendirilir
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +22,8 @@
     <div class="topnav"><h1><i class="far fa-sun"></i>Ros Remote User Interface<i class="far fa-sun"></i></h1></div>
     <div class="card"><p>Ros connection status: <span id="status"></span></p></div>
     
-    <!-- IP ve port düzenleme formu -->
+    
+	<?php if ($_SESSION["isAdmin"] || $_SESSION["isSuperAdmin"]) { ?>
     <h2>IP ve Port Değiştirme Formu</h2>
     <form action="update_jquery.php" method="post">
         <label for="ip">IP Adresi:</label>
@@ -63,7 +74,7 @@
             });
         });
     </script>
-
+	<?php } ?>
     <!-- Roslib ve NippleJS dosyaları -->
     <script src="roslib.min.js"></script>
     <script src="nipplejs.js"></script>

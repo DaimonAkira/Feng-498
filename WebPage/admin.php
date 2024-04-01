@@ -68,6 +68,7 @@ $users = file($usersFile, FILE_IGNORE_NEW_LINES);
     <form action="logout.php" method="post">
         <input type="submit" value="Logout">
     </form>
+	<a href="index.php">Anasayfa</a>
 </body>
 </html>
 

@@ -31,6 +31,6 @@ $updatedJsFile = 'jquery.js';
 file_put_contents($updatedJsFile, $updatedJsContent);
 
 // Başarılı bir şekilde jQuery dosyası güncellendi mesajını döndür
-echo "jQuery dosyası başarıyla güncellendi.";
+echo "jQuery dosyası başarıyla güncellendi. Yeni IP ve Port bilgileri girildi.";
 header("refresh:2;url=index.php");
 ?>
