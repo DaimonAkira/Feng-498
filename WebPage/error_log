@@ -7,3 +7,5 @@ Stack trace:
 #0 {main}
   thrown in /home/cankocum/public_html/feng/admin.php on line 85
 [31-Mar-2024 15:50:07 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/cankocum/public_html/feng/index.php on line 65
+[01-Apr-2024 05:49:19 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /home/cankocum/public_html/feng/admin.php on line 260
+[01-Apr-2024 05:49:20 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /home/cankocum/public_html/feng/admin.php on line 260

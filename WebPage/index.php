@@ -23,16 +23,6 @@ if (!isset($_SESSION["username"])) {
     <div class="card"><p>Ros connection status: <span id="status"></span></p></div>
     
     
-	<?php if ($_SESSION["isAdmin"] || $_SESSION["isSuperAdmin"]) { ?>
-    <h2>IP ve Port Değiştirme Formu</h2>
-    <form action="update_jquery.php" method="post">
-        <label for="ip">IP Adresi:</label>
-        <input type="text" id="ip" name="ip"><br><br>
-        <label for="port">Port:</label>
-        <input type="text" id="port" name="port"><br><br>
-        <input type="submit" value="Güncelle">
-    </form>
-
     <!-- IP ve port bilgilerini gösterme bölümü -->
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
@@ -44,37 +34,7 @@ if (!isset($_SESSION["username"])) {
     <script>
 		document.getElementById("currentIp").textContent = ip;
         document.getElementById("currentPort").textContent = port;
-        $(document).ready(function() {
-            // Sayfa yüklendiğinde mevcut IP ve portu göster
-            var ip = "127.0.0.1"; // Örnek bir IP adresi
-            var port = "8080"; // Örnek bir port numarası
-            $("#currentIp").text(ip);
-            $("#currentPort").text(port);
-
-            // IP ve port güncelleme işlemini gerçekleştir
-            $("#saveButton").click(function() {
-                var newIp = $("#ip").val();
-                var newPort = $("#port").val();
-
-                // AJAX ile update_jquery.php dosyasını çağır
-                $.ajax({
-                    type: "POST",
-                    url: "update_jquery.php",
-                    data: {ip: newIp, port: newPort},
-                    success: function(response) {
-                        // Başarılı yanıt alındığında işlemleri gerçekleştir
-                        alert(response);
-                        // Yeniden yükleme yapabilirsiniz veya başka bir işlem yapabilirsiniz
-                    },
-                    error: function(xhr, status, error) {
-                        // Hata durumunda kullanıcıya bilgi verilebilir
-                        alert("Error updating IP and port: " + xhr.responseText);
-                    }
-                });
-            });
-        });
     </script>
-	<?php } ?>
     <!-- Roslib ve NippleJS dosyaları -->
     <script src="roslib.min.js"></script>
     <script src="nipplejs.js"></script>
