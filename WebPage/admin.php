@@ -82,13 +82,13 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
         <input type="text" id="port" name="port"><br><br>
         <input type="submit" value="Güncelle">
     </form>
-
+	
     <!-- IP ve port bilgilerini gösterme bölümü -->
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
         <p>Current Port: <span id="currentPort"><?php echo $currentPort; ?></span></p>
     </div>
-
+	
     <!-- jQuery dosyası -->
     <script src="jquery.js"></script>
     <script>
@@ -113,13 +113,11 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
                     data: {ip: newIp, port: newPort},
                     success: function(response) {
                         // Başarılı yanıt alındığında işlemleri gerçekleştir
-						reloadPage();
                         alert(response);
                         // Yeniden yükleme yapabilirsiniz veya başka bir işlem yapabilirsiniz
                     },
                     error: function(xhr, status, error) {
                         // Hata durumunda kullanıcıya bilgi verilebilir
-						reloadPage();
                         alert("Error updating IP and port: " + xhr.responseText);
                     }
                 });

@@ -6,16 +6,16 @@ $ip = $_POST['ip'];
 $port = $_POST['port'];
 
 // Mevcut jQuery dosyasının adı ve yolu
-$existingJsFile = 'jquery.js';
+$jsFile = 'jquery.js';
 
 // Mevcut jQuery dosyasını oku
-$existingJsContent = file_get_contents($existingJsFile);
+$jsContent = file_get_contents($jsFile);
 
 // IP ve port değerlerini değiştir
 $updatedJsContent = preg_replace(
     '/const ip = ".+?";/',
     'const ip = "' . $ip . '";',
-    $existingJsContent
+    $jsContent
 );
 
 $updatedJsContent = preg_replace(
@@ -24,11 +24,8 @@ $updatedJsContent = preg_replace(
     $updatedJsContent
 );
 
-// Güncellenmiş jQuery dosyasının adı ve yolu
-$updatedJsFile = 'jquery.js';
-
-// Güncellenmiş jQuery dosyasını oluştur
-file_put_contents($updatedJsFile, $updatedJsContent);
+// Güncellenmiş jQuery dosyasını üzerine yaz
+file_put_contents($jsFile, $updatedJsContent);
 
 // Başarılı bir şekilde jQuery dosyası güncellendi mesajını döndür
 echo "jQuery dosyası başarıyla güncellendi. Yeni IP ve Port bilgileri girildi.";

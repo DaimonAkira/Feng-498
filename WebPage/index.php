@@ -58,7 +58,12 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <form action="logout.php" method="post">
         <input type="submit" value="Logout">
     </form>
-
+	<button onclick="refreshPage()">Sayfayı Yenile</button>
+    <script>
+        function refreshPage() {
+            location.reload(true); // Sayfayı baştan yükle (cache'i atarak)
+        }
+    </script>
     <!-- Admin veya super admin ise, admin paneline yönlendirme butonu -->
     <?php if ($_SESSION["isAdmin"] || $_SESSION["isSuperAdmin"]) { ?>
         <a href="admin.php">Admin Panel</a>
