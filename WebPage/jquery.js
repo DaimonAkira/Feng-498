@@ -6,8 +6,8 @@
 
 //const config = require('./config.json');
 //const ip = ""; this is for the mobile device ip
-const ip = "127.0.0.1"; // this is my local ip
-const port = "8080";
+const ip = "12351"; // this is my local ip
+const port = "51234";
 const urll = 'ws://'+ip+':'+port;
 
 
@@ -140,4 +140,14 @@ var ros = new ROSLIB.Ros({
   window.onload = function () {
     createJoystick();
   }
-  
+ var pageReloaded = false;
+
+	// Tarayıcı önbelleğini temizleyerek sayfayı yenile
+	function reloadPage() {
+		// Sayfa daha önce yenilenmediyse yenile
+		if (!pageReloaded) {
+			location.reload(true);
+			// Bayrağı true olarak ayarla, böylece bir daha yenilenmez
+			pageReloaded = true;
+		}
+	}

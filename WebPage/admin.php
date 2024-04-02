@@ -113,11 +113,13 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
                     data: {ip: newIp, port: newPort},
                     success: function(response) {
                         // Başarılı yanıt alındığında işlemleri gerçekleştir
+						reloadPage();
                         alert(response);
                         // Yeniden yükleme yapabilirsiniz veya başka bir işlem yapabilirsiniz
                     },
                     error: function(xhr, status, error) {
                         // Hata durumunda kullanıcıya bilgi verilebilir
+						reloadPage();
                         alert("Error updating IP and port: " + xhr.responseText);
                     }
                 });

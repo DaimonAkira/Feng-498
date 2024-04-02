@@ -10,5 +10,6 @@ session_destroy();
 
 // Kullanıcıyı login sayfasına yönlendir
 header("Location: index.php");
+
 exit();
 ?>
