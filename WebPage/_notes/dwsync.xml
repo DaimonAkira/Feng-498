@@ -7,7 +7,7 @@
 <file name="login.php" server="C:/xampp/htdocs/" local="133563536056313979" remote="133563536050000000" Dst="0" />
 <file name="users.cfg" server="C:/xampp/htdocs/" local="133563485394796455" remote="133563485390000000" Dst="0" />
 <file name="style.css" server="C:/xampp/htdocs/" local="133563487147497398" remote="133563487140000000" Dst="0" />
-<file name="admin.php" server="ftp.cankocum.com" local="133565485614685612" remote="133565377800000000" Dst="0" />
+<file name="admin.php" server="ftp.cankocum.com" local="133566986948297132" remote="133566879000000000" Dst="0" />
 <file name="index.php" server="ftp.cankocum.com" local="133565474639615002" remote="133565367000000000" Dst="0" />
 <file name="authenticate.php" server="ftp.cankocum.com" local="133563536057872830" remote="133563427800000000" Dst="0" />
 <file name="login.php" server="ftp.cankocum.com" local="133563536056313979" remote="133563427800000000" Dst="0" />
@@ -16,7 +16,7 @@
 <file name="users.cfg" server="ftp.cankocum.com" local="133564138800000000" remote="133564138800000000" Dst="0" />
 <file name="error_log" server="ftp.cankocum.com" local="133565378400000000" remote="133565378400000000" Dst="0" />
 <file name="all.css" server="ftp.cankocum.com" local="133563721943262683" remote="133563614400000000" Dst="0" />
-<file name="jquery.js" server="ftp.cankocum.com" local="133565475404134203" remote="133565378400000000" Dst="0" />
+<file name="jquery.js" server="ftp.cankocum.com" local="133566021000000000" remote="133566021000000000" Dst="0" />
 <file name="nipplejs.js" server="ftp.cankocum.com" local="133185113350000000" remote="133563614400000000" Dst="0" />
 <file name="numjs.min.js" server="ftp.cankocum.com" local="133173122840000000" remote="133563614400000000" Dst="0" />
 <file name="roslib.min.js" server="ftp.cankocum.com" local="133184374810000000" remote="133563614400000000" Dst="0" />

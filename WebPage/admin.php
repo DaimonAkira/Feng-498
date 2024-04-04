@@ -82,7 +82,12 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
         <input type="text" id="port" name="port"><br><br>
         <input type="submit" value="Güncelle">
     </form>
-	
+		<button onclick="refreshPage()">Sayfayı Yenile</button>
+    <script>
+        function refreshPage() {
+            location.reload(true); // Sayfayı baştan yükle (cache'i atarak)
+        }
+    </script>
     <!-- IP ve port bilgilerini gösterme bölümü -->
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
