@@ -40,16 +40,16 @@ ros.on('close', function () {
   console.log("Ros connection closed at " + urll);
 });
 
-var txt_listener = new ROSLIB.Topic({
+/*var txt_listener = new ROSLIB.Topic({
   ros: ros,
   name: '/txt_msg',
   messageType: 'std_msgs/String'
-});
+});*/
 
-txt_listener.subscribe(function (m) {
+/*txt_listener.subscribe(function (m) {
   document.getElementById("msg").innerHTML = m.data;
   move(1, 0);
-});
+});*/
 
 cmd_vel_listener = new ROSLIB.Topic({
   ros: ros,
@@ -57,11 +57,11 @@ cmd_vel_listener = new ROSLIB.Topic({
   messageType: 'geometry_msgs/Twist'
 });
 
-cmd_camera_listener = new ROSLIB.Topic({
+/*cmd_camera_listener = new ROSLIB.Topic({
   ros: ros,
   name: "/eva_mars/camera_port_joint_position_controller/command",
   messageType: 'std_msgs/Float64'
-});
+});*/
 
 move = function (linear, angular) {
   var twist = new ROSLIB.Message({
