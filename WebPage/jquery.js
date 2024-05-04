@@ -1,4 +1,4 @@
-const ip = "127.0.0.1"; // this is my local ip
+const ip = "185.242.161.49"; // this is my local ip
 const port = "9090";
 const urll = 'ws://'+ip+':'+port;
 

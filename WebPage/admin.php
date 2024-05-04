@@ -92,7 +92,6 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
         <p>Current Port: <span id="currentPort"><?php echo $currentPort; ?></span></p>
-		<p><?php echo $_SERVER['SERVER_ADDR']; ?></p>
     </div>
 	
     <!-- jQuery dosyası -->
