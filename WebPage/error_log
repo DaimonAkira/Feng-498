@@ -25,3 +25,14 @@ Stack trace:
 [02-Apr-2024 16:21:03 UTC] PHP Warning:  file_get_contents(jquery.js?v=1712074863): failed to open stream: No such file or directory in /home/cankocum/public_html/feng/update_jquery.php on line 23
 [02-Apr-2024 16:23:29 UTC] PHP Warning:  file_get_contents(jquery.js?v=1712075009): failed to open stream: No such file or directory in /home/cankocum/public_html/feng/update_jquery.php on line 23
 [02-Apr-2024 16:24:15 UTC] PHP Warning:  file_get_contents(jquery.js): failed to open stream: No such file or directory in /home/cankocum/public_html/feng/update_jquery.php on line 12
+[20-Apr-2024 12:30:51 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/cankocum/public_html/feng/login.php on line 9
+[21-Apr-2024 12:36:36 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/cankocum/public_html/feng/login.php on line 9
+[21-Apr-2024 21:24:19 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/cankocum/public_html/feng/login.php on line 9
+[04-May-2024 09:10:27 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/cankocum/public_html/feng/admin.php on line 93
+[04-May-2024 09:15:47 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/cankocum/public_html/feng/admin.php on line 98
+[04-May-2024 09:16:03 UTC] PHP Warning:  Use of undefined constant localip - assumed 'localip' (this will throw an Error in a future version of PHP) in /home/cankocum/public_html/feng/admin.php on line 94
+[04-May-2024 09:16:03 UTC] PHP Warning:  Use of undefined constant currentIp - assumed 'currentIp' (this will throw an Error in a future version of PHP) in /home/cankocum/public_html/feng/admin.php on line 94
+[04-May-2024 09:16:03 UTC] PHP Warning:  A non-numeric value encountered in /home/cankocum/public_html/feng/admin.php on line 95
+[04-May-2024 09:18:24 UTC] PHP Warning:  A non-numeric value encountered in /home/cankocum/public_html/feng/admin.php on line 95
+[04-May-2024 10:46:11 UTC] PHP Parse error:  syntax error, unexpected 'currentIp' (T_STRING) in /home/cankocum/public_html/feng/admin.php on line 94
+[04-May-2024 10:46:12 UTC] PHP Parse error:  syntax error, unexpected 'currentIp' (T_STRING) in /home/cankocum/public_html/feng/admin.php on line 94

@@ -92,6 +92,7 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
         <p>Current Port: <span id="currentPort"><?php echo $currentPort; ?></span></p>
+		<p><?php echo $_SERVER['SERVER_ADDR']; ?></p>
     </div>
 	
     <!-- jQuery dosyası -->
@@ -99,6 +100,17 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <script>
 		document.getElementById("currentIp").textContent = ip;
         document.getElementById("currentPort").textContent = port;
+		var localIpAddress = "<?php echo $_SERVER['SERVER_ADDR']; ?>";
+		if (localIpAddress !== ip) {
+        // İki IP adresi aynı ise
+        var message = "The saved IP address (" + ip + ") does not match the local IP address (" + localIpAddress + "). Need the change saved IP address to the local IP address.";
+    	} else {
+        // İki IP adresi farklı ise
+        var message = "The saved IP address matches the local IP address.";
+    	}
+		var messageElement = document.createElement("p");
+		messageElement.textContent = message;
+		document.getElementById("currentIpPort").appendChild(messageElement);
         $(document).ready(function() {
             // Sayfa yüklendiğinde mevcut IP ve portu göster
             var ip = "127.0.0.1"; // Örnek bir IP adresi
