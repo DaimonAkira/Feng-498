@@ -19,7 +19,10 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
 <head>
     <title>Admin Panel</title>
     <style>
-        /* CSS stilleri buraya eklenebilir */
+       .likeacom {
+        color: #999; /* Gri renk */
+        opacity: 0.5; /* Siliklik derecesi (0 ile 1 arasında değer alır) */
+   	 }
     </style>
 </head>
 <body>
@@ -91,7 +94,7 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <!-- IP ve port bilgilerini gösterme bölümü -->
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
-        <p>Current Port: <span id="currentPort"><?php echo $currentPort; ?></span></p>
+        <p>Current Port: <span id="currentPort"><?php echo $currentPort; ?></span><span class="likeacom"> (Default Port: 9090)</span></p>
     </div>
 	
     <!-- jQuery dosyası -->
