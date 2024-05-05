@@ -15,9 +15,11 @@ statuscontrol = function(){
   }
 }
 
-var ros = new ROSLIB.Ros({
+/*var ros = new ROSLIB.Ros({
   url: urll
-});
+});*/
+
+const ros = new ROSLIB.Ros({ url: urll });
 
 ros.on('connection', function () {
   const statusElement = document.getElementById("status");
