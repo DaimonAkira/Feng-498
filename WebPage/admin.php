@@ -83,8 +83,8 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
         <input type="text" id="ip" name="ip"><br><br>
         <label for="port">Port:</label>
         <input type="text" id="port" name="port"><br><br>
-		<label for="rostopic">Topic:</label>
-        <input type="text" id="rostopic" name="rostopic"><br><br>
+		<label for="rostop">Topic:</label>
+        <input type="text" id="rostop" name="rostop"><br><br>
         <input type="submit" value="Güncelle">
     </form>
 		<button onclick="refreshPage()">Sayfayı Yenile</button>
