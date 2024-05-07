@@ -20,6 +20,9 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
+	<script src="roslib1.min.js"></script>
+	<script src="nipplejs.js"></script>
 </head>
 	
 <body>
@@ -36,6 +39,7 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
         <p>Current Port: <span id="currentPort"><?php echo $currentPort; ?></span></p>
+		<p>Current Topic: <span id="currentTopic"><?php echo $currentTopic; ?></span></p>
     </div>
 
     <!-- jQuery dosyası -->
@@ -43,14 +47,8 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <script>
 		document.getElementById("currentIp").textContent = ip;
         document.getElementById("currentPort").textContent = port;
+        document.getElementById("currentTopic").textContent = rostop;
     </script>
-    <!-- Roslib ve NippleJS dosyaları -->
-    <script src="roslib.min.js"></script>
-    <script src="nipplejs.js"></script>
-
-    <!-- Three.js dosyası -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
-
     <!-- Joystick alanı -->
     <div id="zone_joystick"></div>
 
