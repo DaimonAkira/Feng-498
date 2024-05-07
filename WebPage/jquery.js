@@ -20,7 +20,10 @@ statuscontrol = function(){
   url: urll
 });*/
 
-const ros = new ROSLIB.Ros({ url: urll });
+var ros = new ROSLIB.Ros({
+    //url: 'ws://192.168.1.21:9090'
+    url: urll
+  });
 
 ros.on('connection', function () {
   const statusElement = document.getElementById("status");
