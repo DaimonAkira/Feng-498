@@ -56,7 +56,7 @@ ros.on('close', function () {
 
 cmd_vel_listener = new ROSLIB.Topic({
   ros: ros,
-  name: "/cmd_vel",
+  name: rostop,
   messageType: 'geometry_msgs/Twist'
 });
 
