@@ -122,6 +122,7 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
             // Sayfa yüklendiğinde mevcut IP ve portu göster
             var ip = "127.0.0.1"; // Örnek bir IP adresi
             var port = "8080"; // Örnek bir port numarası
+			var rostop = "/cmd_vel"; // Örnek Topic
             $("#currentIp").text(ip);
             $("#currentPort").text(port);
 			$("#currentTopic").text(rostop);
