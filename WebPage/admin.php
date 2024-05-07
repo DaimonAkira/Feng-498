@@ -21,7 +21,7 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <style>
        .likeacom {
         color: #999; /* Gri renk */
-        opacity: 0.5; /* Siliklik derecesi (0 ile 1 arasında değer alır) */
+        opacity: 0.9; /* Siliklik derecesi (0 ile 1 arasında değer alır) */
    	 }
     </style>
 </head>
@@ -94,11 +94,13 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
         }
     </script>
     <!-- IP ve port bilgilerini gösterme bölümü -->
+	<div class="card"><p>Ros connection status: <span id="status"></span></p></div>
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
         <p>Current Port: <span id="currentPort"><?php echo $currentPort; ?></span><span class="likeacom"> (Default Port: 9090)</span></p>
 		<p>Current Topic: <span id="currentTopic"><?php echo $currentTopic; ?></span></p>
     </div>
+	
 	
     <!-- jQuery dosyası -->
     <script src="jquery.js"></script>

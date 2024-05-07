@@ -30,6 +30,7 @@ ros.on('connection', function () {
   statusElement.innerHTML = "Connected";
   statuscontrol();
   console.log("Ros connection established to " + urll);
+  document.getElementById('zone_joystick').style.display = 'block';
 });
 
 ros.on('error', function (error) {
@@ -37,6 +38,7 @@ ros.on('error', function (error) {
   statusElement.innerHTML = "Error";
   statuscontrol();
   console.log("Something went wrong at " + urll);
+  document.getElementById('zone_joystick').style.display = 'none';
 });
 
 ros.on('close', function () {
@@ -44,6 +46,7 @@ ros.on('close', function () {
   statusElement.innerHTML = "Closed";
   statuscontrol();
   console.log("Ros connection closed at " + urll);
+  document.getElementById('zone_joystick').style.display = 'none';
 });
 
 /*var txt_listener = new ROSLIB.Topic({
