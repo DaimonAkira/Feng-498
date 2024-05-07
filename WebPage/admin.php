@@ -97,6 +97,7 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
         <p>Current Port: <span id="currentPort"><?php echo $currentPort; ?></span><span class="likeacom"> (Default Port: 9090)</span></p>
+		<p>Current Topic: <span id="currentTopic"><?php echo $currentTopic; ?></span></p>
     </div>
 	
     <!-- jQuery dosyası -->
@@ -104,7 +105,7 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <script>
 		document.getElementById("currentIp").textContent = ip;
         document.getElementById("currentPort").textContent = port;
-		document.getElementById("currentPort").textContent = rostop;
+		document.getElementById("currentTopic").textContent = rostop;
 		
 		var localIpAddress = "<?php echo $_SERVER['SERVER_ADDR']; ?>";
 		if (localIpAddress !== ip) {
@@ -123,17 +124,19 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
             var port = "8080"; // Örnek bir port numarası
             $("#currentIp").text(ip);
             $("#currentPort").text(port);
+			$("#currentTopic").text(rostop);
 
             // IP ve port güncelleme işlemini gerçekleştir
             $("#saveButton").click(function() {
                 var newIp = $("#ip").val();
                 var newPort = $("#port").val();
+				var newTopic = $("#rostop").val();
 
                 // AJAX ile update_jquery.php dosyasını çağır
                 $.ajax({
                     type: "POST",
                     url: "update_jquery.php",
-                    data: {ip: newIp, port: newPort},
+                    data: {ip: newIp, port: newPort, rostop: newTopic},
                     success: function(response) {
                         // Başarılı yanıt alındığında işlemleri gerçekleştir
                         alert(response);
@@ -141,7 +144,7 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
                     },
                     error: function(xhr, status, error) {
                         // Hata durumunda kullanıcıya bilgi verilebilir
-                        alert("Error updating IP and port: " + xhr.responseText);
+                        alert("Error updating IP,Port and Topic. " + xhr.responseText);
                     }
                 });
             });
