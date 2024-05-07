@@ -1,6 +1,7 @@
 const ip = "0.0.0.0"; // this is my local ip
 const port = "9090";
 const urll = 'ws://'+ip+':'+port;
+const rostop = "/cmd_vel";
 
 let brakestatus = false;
 

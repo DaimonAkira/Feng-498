@@ -77,12 +77,14 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <!-- Çıkış butonu -->
 	
 	<?php if ($_SESSION["isSuperAdmin"]) { ?>
-    <h2>IP ve Port Değiştirme Formu</h2>
+    <h2>IP, Port ve Topic Değiştirme Formu</h2>
     <form action="update_jquery.php" method="post">
         <label for="ip">IP Adresi:</label>
         <input type="text" id="ip" name="ip"><br><br>
         <label for="port">Port:</label>
         <input type="text" id="port" name="port"><br><br>
+		<label for="rostopic">Topic:</label>
+        <input type="text" id="rostopic" name="rostopic"><br><br>
         <input type="submit" value="Güncelle">
     </form>
 		<button onclick="refreshPage()">Sayfayı Yenile</button>
@@ -102,6 +104,8 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
     <script>
 		document.getElementById("currentIp").textContent = ip;
         document.getElementById("currentPort").textContent = port;
+		document.getElementById("currentPort").textContent = rostop;
+		
 		var localIpAddress = "<?php echo $_SERVER['SERVER_ADDR']; ?>";
 		if (localIpAddress !== ip) {
         // İki IP adresi aynı ise
