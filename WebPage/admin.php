@@ -18,7 +18,15 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
 <html>
 <head>
     <title>Admin Panel</title>
-    <style>
+     <meta charset="utf-8" />
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
+	<script src="roslib1.min.js"></script>
+	<script src="nipplejs.js"></script>
+	<style>
        .likeacom {
         color: #999; /* Gri renk */
         opacity: 0.9; /* Siliklik derecesi (0 ile 1 arasında değer alır) */
