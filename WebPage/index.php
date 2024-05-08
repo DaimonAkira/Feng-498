@@ -50,8 +50,9 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
         document.getElementById("currentTopic").textContent = rostop;
     </script>
     <!-- Joystick alanı -->
+    <?php if ($_SESSION["isAdmin"] || $_SESSION["isSuperAdmin"]) { ?>
     <div id="zone_joystick" style="display: none;"></div>
-
+    <?php } ?>
     <!-- Çıkış butonu -->
     <form action="logout.php" method="post">
         <input type="submit" value="Logout">
