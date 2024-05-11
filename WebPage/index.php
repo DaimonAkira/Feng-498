@@ -33,7 +33,9 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
         <p>Yetki Düzeyin: <?php echo $role; ?></p>
     </div>
     <div class="card"><p>Ros connection status: <span id="status"></span></p></div>
-    
+    <h1>Hovercraft Controls</h1>
+    <button id="startButton">Skirt Motor Start</button>
+    <button id="stopButton">Skirt Motor Stop</button> 
     
     <!-- IP ve port bilgilerini gösterme bölümü -->
     <div id="currentIpPort">

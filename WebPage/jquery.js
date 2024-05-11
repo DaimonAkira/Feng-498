@@ -3,6 +3,9 @@ const port = "9090";
 const urll = 'ws://'+ip+':'+port;
 const rostop = "/cmd_vel";
 
+var startButton = document.getElementById('startButton');
+var stopButton = document.getElementById('stopButton');
+
 let brakestatus = false;
 
 statuscontrol = function(){
@@ -87,6 +90,34 @@ move = function (linear, angular) {
   });
   cmd_vel_listener.publish(twist);
 }
+
+/*startButton.addEventListener('click', function() {
+    var motorCommand = new ROSLIB.Topic({
+        ros: ros,
+        name: '/motor_command',
+        messageType: 'std_msgs/String'
+    });
+
+    var startMsg = new ROSLIB.Message({
+        data: 'start'
+    });
+
+    motorCommand.publish(startMsg);
+});
+
+stopButton.addEventListener('click', function() {
+    var motorCommand = new ROSLIB.Topic({
+        ros: ros,
+        name: '/motor_command',
+        messageType: 'std_msgs/String'
+    });
+
+    var stopMsg = new ROSLIB.Message({
+        data: 'stop'
+    });
+
+    motorCommand.publish(stopMsg);
+});*/
 
 createJoystick = function () {
   var options = {
