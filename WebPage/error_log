@@ -39,4 +39,3 @@ Stack trace:
 [06-May-2024 07:56:50 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/cankocum/public_html/feng/login.php on line 9
 [07-May-2024 07:18:37 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/cankocum/public_html/feng/login.php on line 9
 [07-May-2024 13:49:37 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/cankocum/public_html/feng/login.php on line 9
-[09-May-2024 17:57:28 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/cankocum/public_html/feng/login.php on line 9

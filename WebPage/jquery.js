@@ -1,7 +1,7 @@
-const ip = "192.168.168.115"; // this is my local ip
+const ip = "0.0.0.0"; // this is my local ip
 const port = "9090";
 const urll = 'ws://'+ip+':'+port;
-const rostop = "/turtle1/cmd_vel";
+const rostop = "/cmd_vel";
 
 var startButton = document.getElementById('startButton');
 var stopButton = document.getElementById('stopButton');

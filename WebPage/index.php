@@ -33,16 +33,16 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
         <p>Yetki Düzeyin: <?php echo $role; ?></p>
     </div>
     <div class="card"><p>Ros connection status: <span id="status"></span></p></div>
-    <h1>Hovercraft Controls</h1>
-    <button id="startButton">Skirt Motor Start</button>
-    <button id="stopButton">Skirt Motor Stop</button> 
-    
-    <!-- IP ve port bilgilerini gösterme bölümü -->
+	    <!-- IP ve port bilgilerini gösterme bölümü -->
     <div id="currentIpPort">
         <p>Current IP: <span id="currentIp"><?php echo $currentIp; ?></span></p>
         <p>Current Port: <span id="currentPort"><?php echo $currentPort; ?></span></p>
 		<p>Current Topic: <span id="currentTopic"><?php echo $currentTopic; ?></span></p>
     </div>
+    <h1>Hovercraft Controls</h1>
+    <button id="startButton">Skirt Motor Start</button>
+    <button id="stopButton">Skirt Motor Stop</button> 
+    
 
     <!-- jQuery dosyası -->
     <script src="jquery.js"></script>
@@ -52,9 +52,8 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
         document.getElementById("currentTopic").textContent = rostop;
     </script>
     <!-- Joystick alanı -->
-    <?php if ($_SESSION["isAdmin"] || $_SESSION["isSuperAdmin"]) { ?>
-    <div id="zone_joystick" style="display: none;"></div>
-    <?php } ?>
+    <div id="zone_joystick" style="display: none; width: 60%; margin: 0px auto;"></div>
+
     <!-- Çıkış butonu -->
     <form action="logout.php" method="post">
         <input type="submit" value="Logout">
