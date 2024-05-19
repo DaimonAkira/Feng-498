@@ -123,7 +123,7 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
         var message = "The saved IP address (" + ip + ") does not match the local IP address (" + localIpAddress + "). Need the change saved IP address to the local IP address.";
     	} else {
         // İki IP adresi farklı ise
-        var message = "The saved IP address matches the local IP address.";
+        var message = "The saved IP address matches the local IP address.(" + localIpAddress + ")";
     	}
 		var messageElement = document.createElement("p");
 		messageElement.textContent = message;
