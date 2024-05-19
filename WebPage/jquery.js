@@ -52,6 +52,18 @@ ros.on('close', function () {
   document.getElementById('zone_joystick').style.display = 'none';
 });
 
+var arduinoCommand = new ROSLIB.Topic({
+      ros : ros,
+      name : '/arduino_command',
+      messageType : 'std_msgs/String'
+	});
+
+function sendCommand(command) {
+	var message = new ROSLIB.Message({
+			data: command
+		});
+	arduinoCommand.publish(message);
+}
 /*var txt_listener = new ROSLIB.Topic({
   ros: ros,
   name: '/txt_msg',

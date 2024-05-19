@@ -40,8 +40,8 @@ $role = $_SESSION["isAdmin"] ? "Admin" : ($_SESSION["isSuperAdmin"] ? "Süper Ad
 		<p>Current Topic: <span id="currentTopic"><?php echo $currentTopic; ?></span></p>
     </div>
     <h1>Hovercraft Controls</h1>
-    <button id="startButton">Skirt Motor Start</button>
-    <button id="stopButton">Skirt Motor Stop</button> 
+ 	<button onclick="sendCommand('start')">Start Skirt Motor</button>
+  	<button onclick="sendCommand('stop')">Stop Skirt Motor</button>
     
 
     <!-- jQuery dosyası -->
