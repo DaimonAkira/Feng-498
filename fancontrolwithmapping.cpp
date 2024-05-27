@@ -93,11 +93,11 @@ void loop() {
       Serial.println(escValue);
       esc.writeMicroseconds(escValue);
       lcd.setCursor(0,0); // İlk satırın başlangıç noktası
-      lcd.print("Distance=");
+      lcd.print("Distance = ");
       lcd.setCursor(10,0);
       lcd.print(distance);
       lcd.setCursor(0,1); // İkinci satırın başlangıç noktası
-      lcd.print("ESCValue=");
+      lcd.print("ESCValue =");
       lcd.setCursor(10,1); // İkinci satırın başlangıç noktası
       lcd.print(escValue);
     if(distance <= 50) {
